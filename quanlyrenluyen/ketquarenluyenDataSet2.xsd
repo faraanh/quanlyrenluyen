@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ketquarenluyenDataSet2" targetNamespace="http://tempuri.org/ketquarenluyenDataSet2.xsd" xmlns:mstns="http://tempuri.org/ketquarenluyenDataSet2.xsd" xmlns="http://tempuri.org/ketquarenluyenDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ketquarenluyenConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ketquarenluyenConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.quanlyrenluyen.Properties.Settings.GlobalReference.Default.ketquarenluyenConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="renluyenTableAdapter" GeneratorDataComponentClassName="renluyenTableAdapter" Name="renluyen" UserDataComponentName="renluyenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ketquarenluyenConnectionString (Settings)" DbObjectName="ketquarenluyen.dbo.renluyen" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Họ tên], [Ngày ghi nhận], [Thành tích], [Vi phạm] FROM dbo.renluyen</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Họ tên" DataSetColumn="Họ tên" />
+              <Mapping SourceColumn="Ngày ghi nhận" DataSetColumn="Ngày ghi nhận" />
+              <Mapping SourceColumn="Thành tích" DataSetColumn="Thành tích" />
+              <Mapping SourceColumn="Vi phạm" DataSetColumn="Vi phạm" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ketquarenluyenDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ketquarenluyenDataSet2" msprop:Generator_UserDSName="ketquarenluyenDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="renluyen" msprop:Generator_TableClassName="renluyenDataTable" msprop:Generator_TableVarName="tablerenluyen" msprop:Generator_TablePropName="renluyen" msprop:Generator_RowDeletingName="renluyenRowDeleting" msprop:Generator_RowChangingName="renluyenRowChanging" msprop:Generator_RowEvHandlerName="renluyenRowChangeEventHandler" msprop:Generator_RowDeletedName="renluyenRowDeleted" msprop:Generator_UserTableName="renluyen" msprop:Generator_RowChangedName="renluyenRowChanged" msprop:Generator_RowEvArgName="renluyenRowChangeEvent" msprop:Generator_RowClassName="renluyenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Họ_x0020_tên" msprop:Generator_ColumnVarNameInTable="columnHọ_tên" msprop:Generator_ColumnPropNameInRow="Họ_tên" msprop:Generator_ColumnPropNameInTable="Họ_tênColumn" msprop:Generator_UserColumnName="Họ tên" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ngày_x0020_ghi_x0020_nhận" msprop:Generator_ColumnVarNameInTable="columnNgày_ghi_nhận" msprop:Generator_ColumnPropNameInRow="Ngày_ghi_nhận" msprop:Generator_ColumnPropNameInTable="Ngày_ghi_nhậnColumn" msprop:Generator_UserColumnName="Ngày ghi nhận" type="xs:dateTime" />
+              <xs:element name="Thành_x0020_tích" msprop:Generator_ColumnVarNameInTable="columnThành_tích" msprop:Generator_ColumnPropNameInRow="Thành_tích" msprop:Generator_ColumnPropNameInTable="Thành_tíchColumn" msprop:Generator_UserColumnName="Thành tích">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vi_x0020_phạm" msprop:Generator_ColumnVarNameInTable="columnVi_phạm" msprop:Generator_ColumnPropNameInRow="Vi_phạm" msprop:Generator_ColumnPropNameInTable="Vi_phạmColumn" msprop:Generator_UserColumnName="Vi phạm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
