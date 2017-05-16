@@ -22,6 +22,7 @@ namespace quanlyrenluyen
     {
 
         public static string TaiKhoan = String.Empty;
+        string MatKhau = String.Empty;
         public ssni()
         {
             InitializeComponent();
@@ -41,11 +42,20 @@ namespace quanlyrenluyen
             bt_Dangxuat.Enabled = false;
         }
 
+        bool checkpass()
+        {
+            for (int i = 0; i < MatKhau.Length; i++)
+                if (MatKhau[i].Equals(' ')) return false;
+            for (int i = 0; i < TaiKhoan.Length; i++)
+                if (TaiKhoan[i].Equals(' ')) return false;
+            return true;
+        }
+
         private void bt_DangNhap_Click(object sender, EventArgs e)
         {
             string PhanQuyenadmin = "admin";
             string PhanQuyenguest = "user";
-            string MatKhau = tb_MauKhau.Text.Trim();
+            MatKhau = tb_MauKhau.Text.Trim();
             TaiKhoan = tb_MaTaiKhoan.Text.Trim();
             //SqlCommand cmd = new SqlCommand("select * from TaiKhoan where MaTk=@MaTk and MatKhau=@MatKhau and PhanQuyen='" + PhanQuyenadmin + "'");
             //cmd.Parameters.Add(new SqlParameter("@MaTk",TaiKhoan));
@@ -53,31 +63,37 @@ namespace quanlyrenluyen
             //cmd.ExecuteNonQuery() == 1
             BLL bll = new BLL();
             // tien the phan quyen luon nhe?
-            if (bll.CheckID("select * from TaiKhoan where MaTk='" + TaiKhoan + "' and MatKhau='" + MatKhau + "' and PhanQuyen='" + PhanQuyenadmin + "'") == 1)
+            if (checkpass())
             {
-                MessageBox.Show("Đã đăng nhập với quyền Admin", "Đăng nhập thành công");
-                Page_quanlychung.Visible = true;
-                Page_quanlylop.Visible = true;
-                Page_thongke.Visible = true;
-                bt_Dangxuat.Enabled = true;
-                bt_DangNhap.Enabled = false;
-                tb_MaTaiKhoan.Text = "";
-                tb_MauKhau.Text = "";
-            }
-            else if (bll.CheckID("select * from TaiKhoan where MaTk='" + TaiKhoan + "' and MatKhau='" + MatKhau + "' and PhanQuyen='"+PhanQuyenguest+"'") == 1)
-            {
-                MessageBox.Show("Đã đăng nhập với quyền User", "Đăng nhập thành công");
-                // tiep tuc cac tuy chon o day
-                Page_quanlychung.Visible = false;
-                Page_quanlylop.Visible = true;
-                Page_thongke.Visible = true;
-                bt_Dangxuat.Enabled = true;
-                bt_DangNhap.Enabled = false;
-                tb_MaTaiKhoan.Text = "";
-                tb_MauKhau.Text = "";
+                if (bll.CheckID("select * from TaiKhoan where MaTk='" + TaiKhoan + "' and MatKhau='" + MatKhau + "' and PhanQuyen='" + PhanQuyenadmin + "'") == 1)
+                {
+                    MessageBox.Show("Đã đăng nhập với quyền Admin", "Đăng nhập thành công");
+                    Page_quanlychung.Visible = true;
+                    Page_quanlylop.Visible = true;
+                    Page_thongke.Visible = true;
+                    bt_Dangxuat.Enabled = true;
+                    bt_DangNhap.Enabled = false;
+                    tb_MaTaiKhoan.Text = "";
+                    tb_MauKhau.Text = "";
+                }
+                else if (bll.CheckID("select * from TaiKhoan where MaTk='" + TaiKhoan + "' and MatKhau='" + MatKhau + "' and PhanQuyen='"+PhanQuyenguest+"'") == 1)
+                {
+                    MessageBox.Show("Đã đăng nhập với quyền User", "Đăng nhập thành công");
+                    // tiep tuc cac tuy chon o day
+                    Page_quanlychung.Visible = false;
+                    Page_quanlylop.Visible = true;
+                    Page_thongke.Visible = true;
+                    bt_Dangxuat.Enabled = true;
+                    bt_DangNhap.Enabled = false;
+                    tb_MaTaiKhoan.Text = "";
+                    tb_MauKhau.Text = "";
+                }
+                else
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Đăng nhập thất bại");
             }
             else
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Đăng nhập thất bại");
+                MessageBox.Show("Đang cố gắng injection???\n        (^-^)       \nKhông được nhé!", "Đăng nhập thất bại");
+
         }
 
         private void bt_QuanlyTaikhoan_ItemClick(object sender, ItemClickEventArgs e)
@@ -103,6 +119,7 @@ namespace quanlyrenluyen
             tb_MaTaiKhoan.Text = "";
             tb_MauKhau.Text = "";
             TaiKhoan = String.Empty;
+            bt_Dangxuat.Enabled = false;
         }
 
         private void bt_Gvcn_ItemClick(object sender, ItemClickEventArgs e)

@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label maDiemCongLabel;
             System.Windows.Forms.Label tenDiemCongLabel;
             System.Windows.Forms.Label diemCongLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DiemCong));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_Diemcong = new System.Windows.Forms.DataGridView();
+            this.maDiemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDiemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemCongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.bt_them = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Xoa = new DevExpress.XtraEditors.SimpleButton();
@@ -43,28 +49,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tb_diemcong = new DevExpress.XtraEditors.TextEdit();
-            this.diemCongBindingSource = new System.Windows.Forms.BindingSource();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.maDiemCongTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tenDiemCongTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.gvcnBindingSource = new System.Windows.Forms.BindingSource();
+            this.gvcnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvcnTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.GvcnTableAdapter();
             this.tableAdapterManager = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TableAdapterManager();
             this.diemCongTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.DiemCongTableAdapter();
-            this.maDiemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDiemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maDiemCongLabel = new System.Windows.Forms.Label();
             tenDiemCongLabel = new System.Windows.Forms.Label();
             diemCongLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Diemcong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tb_diemcong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maDiemCongTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDiemCongTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).BeginInit();
@@ -122,6 +123,40 @@
             this.dataGrv_Diemcong.Size = new System.Drawing.Size(326, 237);
             this.dataGrv_Diemcong.TabIndex = 0;
             this.dataGrv_Diemcong.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_Gvcn_CellEnter);
+            // 
+            // maDiemCongDataGridViewTextBoxColumn
+            // 
+            this.maDiemCongDataGridViewTextBoxColumn.DataPropertyName = "MaDiemCong";
+            this.maDiemCongDataGridViewTextBoxColumn.HeaderText = "Mã điểm cộng";
+            this.maDiemCongDataGridViewTextBoxColumn.Name = "maDiemCongDataGridViewTextBoxColumn";
+            this.maDiemCongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maDiemCongDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tenDiemCongDataGridViewTextBoxColumn
+            // 
+            this.tenDiemCongDataGridViewTextBoxColumn.DataPropertyName = "TenDiemCong";
+            this.tenDiemCongDataGridViewTextBoxColumn.HeaderText = "Tên điểm cộng";
+            this.tenDiemCongDataGridViewTextBoxColumn.Name = "tenDiemCongDataGridViewTextBoxColumn";
+            this.tenDiemCongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenDiemCongDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // diemCongDataGridViewTextBoxColumn
+            // 
+            this.diemCongDataGridViewTextBoxColumn.DataPropertyName = "DiemCong";
+            this.diemCongDataGridViewTextBoxColumn.HeaderText = "Điểm cộng";
+            this.diemCongDataGridViewTextBoxColumn.Name = "diemCongDataGridViewTextBoxColumn";
+            this.diemCongDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diemCongDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // diemCongBindingSource
+            // 
+            this.diemCongBindingSource.DataMember = "DiemCong";
+            this.diemCongBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupControl1
             // 
@@ -207,16 +242,6 @@
             this.tb_diemcong.Size = new System.Drawing.Size(158, 20);
             this.tb_diemcong.TabIndex = 5;
             // 
-            // diemCongBindingSource
-            // 
-            this.diemCongBindingSource.DataMember = "DiemCong";
-            this.diemCongBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // maDiemCongTextEdit
             // 
             this.maDiemCongTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.diemCongBindingSource, "MaDiemCong", true));
@@ -260,30 +285,6 @@
             // 
             this.diemCongTableAdapter.ClearBeforeFill = true;
             // 
-            // maDiemCongDataGridViewTextBoxColumn
-            // 
-            this.maDiemCongDataGridViewTextBoxColumn.DataPropertyName = "MaDiemCong";
-            this.maDiemCongDataGridViewTextBoxColumn.HeaderText = "Mã điểm cộng";
-            this.maDiemCongDataGridViewTextBoxColumn.Name = "maDiemCongDataGridViewTextBoxColumn";
-            this.maDiemCongDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maDiemCongDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tenDiemCongDataGridViewTextBoxColumn
-            // 
-            this.tenDiemCongDataGridViewTextBoxColumn.DataPropertyName = "TenDiemCong";
-            this.tenDiemCongDataGridViewTextBoxColumn.HeaderText = "Tên điểm cộng";
-            this.tenDiemCongDataGridViewTextBoxColumn.Name = "tenDiemCongDataGridViewTextBoxColumn";
-            this.tenDiemCongDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenDiemCongDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // diemCongDataGridViewTextBoxColumn
-            // 
-            this.diemCongDataGridViewTextBoxColumn.DataPropertyName = "DiemCong";
-            this.diemCongDataGridViewTextBoxColumn.HeaderText = "Điểm cộng";
-            this.diemCongDataGridViewTextBoxColumn.Name = "diemCongDataGridViewTextBoxColumn";
-            this.diemCongDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diemCongDataGridViewTextBoxColumn.Width = 70;
-            // 
             // Form_DiemCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,14 +300,14 @@
             this.Text = "Quản lý điểm cộng";
             this.Load += new System.EventHandler(this.Form_Gvcn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Diemcong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tb_diemcong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maDiemCongTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDiemCongTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).EndInit();

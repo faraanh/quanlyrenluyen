@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label maKhoaLabel;
             System.Windows.Forms.Label nienKhoaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Khoahoc));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_Khoahoc = new System.Windows.Forms.DataGridView();
+            this.maKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nienKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khoaHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.bt_them = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Sua = new DevExpress.XtraEditors.SimpleButton();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
-            this.gvcnBindingSource = new System.Windows.Forms.BindingSource();
+            this.gvcnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvcnTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.GvcnTableAdapter();
             this.tableAdapterManager = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TableAdapterManager();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.maKhoaTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.khoaHocBindingSource = new System.Windows.Forms.BindingSource();
             this.nienKhoaTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.khoaHocTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.KhoaHocTableAdapter();
-            this.maKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nienKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maKhoaLabel = new System.Windows.Forms.Label();
             nienKhoaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Khoahoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maKhoaTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nienKhoaTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +107,30 @@
             this.dataGrv_Khoahoc.Size = new System.Drawing.Size(237, 207);
             this.dataGrv_Khoahoc.TabIndex = 0;
             this.dataGrv_Khoahoc.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_Khoahoc_CellEnter_1);
+            // 
+            // maKhoaDataGridViewTextBoxColumn
+            // 
+            this.maKhoaDataGridViewTextBoxColumn.DataPropertyName = "MaKhoa";
+            this.maKhoaDataGridViewTextBoxColumn.HeaderText = "Mã Khóa học";
+            this.maKhoaDataGridViewTextBoxColumn.Name = "maKhoaDataGridViewTextBoxColumn";
+            this.maKhoaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nienKhoaDataGridViewTextBoxColumn
+            // 
+            this.nienKhoaDataGridViewTextBoxColumn.DataPropertyName = "NienKhoa";
+            this.nienKhoaDataGridViewTextBoxColumn.HeaderText = "Niên khóa";
+            this.nienKhoaDataGridViewTextBoxColumn.Name = "nienKhoaDataGridViewTextBoxColumn";
+            this.nienKhoaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // khoaHocBindingSource
+            // 
+            this.khoaHocBindingSource.DataMember = "KhoaHoc";
+            this.khoaHocBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupControl1
             // 
@@ -160,11 +185,6 @@
             this.bt_Sua.Text = "Sửa";
             this.bt_Sua.Click += new System.EventHandler(this.bt_Sua_Click_1);
             // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gvcnBindingSource
             // 
             this.gvcnBindingSource.DataMember = "Gvcn";
@@ -208,11 +228,6 @@
             this.maKhoaTextEdit.Size = new System.Drawing.Size(100, 20);
             this.maKhoaTextEdit.TabIndex = 1;
             // 
-            // khoaHocBindingSource
-            // 
-            this.khoaHocBindingSource.DataMember = "KhoaHoc";
-            this.khoaHocBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
             // nienKhoaTextEdit
             // 
             this.nienKhoaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.khoaHocBindingSource, "NienKhoa", true));
@@ -224,20 +239,6 @@
             // khoaHocTableAdapter
             // 
             this.khoaHocTableAdapter.ClearBeforeFill = true;
-            // 
-            // maKhoaDataGridViewTextBoxColumn
-            // 
-            this.maKhoaDataGridViewTextBoxColumn.DataPropertyName = "MaKhoa";
-            this.maKhoaDataGridViewTextBoxColumn.HeaderText = "Mã Khóa học";
-            this.maKhoaDataGridViewTextBoxColumn.Name = "maKhoaDataGridViewTextBoxColumn";
-            this.maKhoaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nienKhoaDataGridViewTextBoxColumn
-            // 
-            this.nienKhoaDataGridViewTextBoxColumn.DataPropertyName = "NienKhoa";
-            this.nienKhoaDataGridViewTextBoxColumn.HeaderText = "Niên khóa";
-            this.nienKhoaDataGridViewTextBoxColumn.Name = "nienKhoaDataGridViewTextBoxColumn";
-            this.nienKhoaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form_Khoahoc
             // 
@@ -253,15 +254,15 @@
             this.Text = "Quản lý khóa học";
             this.Load += new System.EventHandler(this.Form_Khoahoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Khoahoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maKhoaTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khoaHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nienKhoaTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 

@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label maGvcnLabel;
             System.Windows.Forms.Label tenGvcnLabel;
             System.Windows.Forms.Label maTkLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Gvcn));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_Gvcn = new System.Windows.Forms.DataGridView();
+            this.maGvcnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenGvcnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvcnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.bt_them = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
-            this.gvcnBindingSource = new System.Windows.Forms.BindingSource();
             this.gvcnTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.GvcnTableAdapter();
             this.tableAdapterManager = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TableAdapterManager();
             this.maGvcnTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tenGvcnTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.maTkTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.maGvcnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenGvcnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maGvcnLabel = new System.Windows.Forms.Label();
             tenGvcnLabel = new System.Windows.Forms.Label();
             maTkLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Gvcn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maGvcnTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenGvcnTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maTkTextEdit.Properties)).BeginInit();
@@ -119,6 +120,38 @@
             this.dataGrv_Gvcn.Size = new System.Drawing.Size(372, 153);
             this.dataGrv_Gvcn.TabIndex = 0;
             this.dataGrv_Gvcn.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_Gvcn_CellEnter);
+            // 
+            // maGvcnDataGridViewTextBoxColumn
+            // 
+            this.maGvcnDataGridViewTextBoxColumn.DataPropertyName = "MaGvcn";
+            this.maGvcnDataGridViewTextBoxColumn.HeaderText = "Mã Gvcn";
+            this.maGvcnDataGridViewTextBoxColumn.Name = "maGvcnDataGridViewTextBoxColumn";
+            this.maGvcnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenGvcnDataGridViewTextBoxColumn
+            // 
+            this.tenGvcnDataGridViewTextBoxColumn.DataPropertyName = "TenGvcn";
+            this.tenGvcnDataGridViewTextBoxColumn.HeaderText = "Tên Gvcn";
+            this.tenGvcnDataGridViewTextBoxColumn.Name = "tenGvcnDataGridViewTextBoxColumn";
+            this.tenGvcnDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenGvcnDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // maTkDataGridViewTextBoxColumn
+            // 
+            this.maTkDataGridViewTextBoxColumn.DataPropertyName = "MaTk";
+            this.maTkDataGridViewTextBoxColumn.HeaderText = "Mã tài khoản";
+            this.maTkDataGridViewTextBoxColumn.Name = "maTkDataGridViewTextBoxColumn";
+            this.maTkDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gvcnBindingSource
+            // 
+            this.gvcnBindingSource.DataMember = "Gvcn";
+            this.gvcnBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupControl1
             // 
@@ -182,16 +215,6 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Danh sách giáo viên:";
             // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gvcnBindingSource
-            // 
-            this.gvcnBindingSource.DataMember = "Gvcn";
-            this.gvcnBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
             // gvcnTableAdapter
             // 
             this.gvcnTableAdapter.ClearBeforeFill = true;
@@ -248,28 +271,6 @@
             this.groupControl2.TabIndex = 31;
             this.groupControl2.Text = "Thông tin";
             // 
-            // maGvcnDataGridViewTextBoxColumn
-            // 
-            this.maGvcnDataGridViewTextBoxColumn.DataPropertyName = "MaGvcn";
-            this.maGvcnDataGridViewTextBoxColumn.HeaderText = "Mã Gvcn";
-            this.maGvcnDataGridViewTextBoxColumn.Name = "maGvcnDataGridViewTextBoxColumn";
-            this.maGvcnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenGvcnDataGridViewTextBoxColumn
-            // 
-            this.tenGvcnDataGridViewTextBoxColumn.DataPropertyName = "TenGvcn";
-            this.tenGvcnDataGridViewTextBoxColumn.HeaderText = "Tên Gvcn";
-            this.tenGvcnDataGridViewTextBoxColumn.Name = "tenGvcnDataGridViewTextBoxColumn";
-            this.tenGvcnDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenGvcnDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // maTkDataGridViewTextBoxColumn
-            // 
-            this.maTkDataGridViewTextBoxColumn.DataPropertyName = "MaTk";
-            this.maTkDataGridViewTextBoxColumn.HeaderText = "Mã tài khoản";
-            this.maTkDataGridViewTextBoxColumn.Name = "maTkDataGridViewTextBoxColumn";
-            this.maTkDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // Form_Gvcn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,10 +286,10 @@
             this.Text = "Quản lý giáo viên chủ nhiệm";
             this.Load += new System.EventHandler(this.Form_Gvcn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Gvcn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maGvcnTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenGvcnTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maTkTextEdit.Properties)).EndInit();
