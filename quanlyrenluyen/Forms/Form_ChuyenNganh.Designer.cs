@@ -257,10 +257,10 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGrv_ChuyenNganh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_ChuyenNganh";
             this.Text = "Quản lý chuyên ngành";
-
             this.Load += new System.EventHandler(this.Form_ChuyenNganh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_ChuyenNganh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chuyenNganhBindingSource)).EndInit();

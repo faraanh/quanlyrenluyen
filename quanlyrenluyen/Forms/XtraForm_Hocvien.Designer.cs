@@ -37,6 +37,13 @@
             System.Windows.Forms.Label queQuanLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm_Hocvien));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maHvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.queQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.hocVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.hocVienTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.HocVienTableAdapter();
@@ -69,13 +76,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.fKHocVienLopBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm1), true, true);
-            this.maHvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.queQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             maHvLabel = new System.Windows.Forms.Label();
             maLopLabel = new System.Windows.Forms.Label();
             hoTenLabel = new System.Windows.Forms.Label();
@@ -171,6 +171,61 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            // 
+            // maHvDataGridViewTextBoxColumn
+            // 
+            this.maHvDataGridViewTextBoxColumn.DataPropertyName = "MaHv";
+            this.maHvDataGridViewTextBoxColumn.HeaderText = "Mã học viên";
+            this.maHvDataGridViewTextBoxColumn.Name = "maHvDataGridViewTextBoxColumn";
+            this.maHvDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maHvDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.maHvDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "Lớp";
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoTenDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // queQuanDataGridViewTextBoxColumn
+            // 
+            this.queQuanDataGridViewTextBoxColumn.DataPropertyName = "QueQuan";
+            this.queQuanDataGridViewTextBoxColumn.HeaderText = "Quê quán";
+            this.queQuanDataGridViewTextBoxColumn.Name = "queQuanDataGridViewTextBoxColumn";
+            this.queQuanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.queQuanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Ảnh";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.Visible = false;
             // 
             // hocVienBindingSource
             // 
@@ -291,6 +346,7 @@
             // 
             this.cbbMalop.DataSource = this.lopBindingSource;
             this.cbbMalop.DisplayMember = "MaLop";
+            this.cbbMalop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMalop.FormattingEnabled = true;
             this.cbbMalop.Location = new System.Drawing.Point(270, 89);
             this.cbbMalop.Name = "cbbMalop";
@@ -392,6 +448,8 @@
             // 
             // cbbTimkiem
             // 
+            this.cbbTimkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cbbTimkiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimkiem.FormattingEnabled = true;
             this.cbbTimkiem.Items.AddRange(new object[] {
             "Mã học viên",
@@ -471,61 +529,6 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
-            // maHvDataGridViewTextBoxColumn
-            // 
-            this.maHvDataGridViewTextBoxColumn.DataPropertyName = "MaHv";
-            this.maHvDataGridViewTextBoxColumn.HeaderText = "Mã học viên";
-            this.maHvDataGridViewTextBoxColumn.Name = "maHvDataGridViewTextBoxColumn";
-            this.maHvDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maHvDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.maHvDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // maLopDataGridViewTextBoxColumn
-            // 
-            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
-            this.maLopDataGridViewTextBoxColumn.HeaderText = "Lớp";
-            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
-            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoTenDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.ReadOnly = true;
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // queQuanDataGridViewTextBoxColumn
-            // 
-            this.queQuanDataGridViewTextBoxColumn.DataPropertyName = "QueQuan";
-            this.queQuanDataGridViewTextBoxColumn.HeaderText = "Quê quán";
-            this.queQuanDataGridViewTextBoxColumn.Name = "queQuanDataGridViewTextBoxColumn";
-            this.queQuanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.queQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // Image
-            // 
-            this.Image.DataPropertyName = "Image";
-            this.Image.HeaderText = "Ảnh";
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
-            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Image.Visible = false;
-            // 
             // XtraForm_Hocvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,6 +539,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "XtraForm_Hocvien";
             this.Text = "Quản lý học viên";

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ssni));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.bt_QuanlyTaikhoan = new DevExpress.XtraBars.BarButtonItem();
@@ -312,9 +312,9 @@
             this.Gr_QuanTri.ItemLinks.Add(this.bt_Gvcn);
             this.Gr_QuanTri.Name = "Gr_QuanTri";
             this.Gr_QuanTri.ShowCaptionButton = false;
-            toolTipTitleItem1.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.Gr_QuanTri.SuperTip = superToolTip1;
+            toolTipTitleItem4.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.Gr_QuanTri.SuperTip = superToolTip4;
             this.Gr_QuanTri.Text = "Quản Trị";
             // 
             // Gr_Nhom
@@ -406,17 +406,17 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            toolTipTitleItem2.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.ribbonPageGroup1.SuperTip = superToolTip2;
+            toolTipTitleItem5.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.ribbonPageGroup1.SuperTip = superToolTip5;
             this.ribbonPageGroup1.Text = "Tài khoản";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            toolTipTitleItem3.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.ribbonPageGroup2.SuperTip = superToolTip3;
+            toolTipTitleItem6.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.ribbonPageGroup2.SuperTip = superToolTip6;
             this.ribbonPageGroup2.Text = "Tài khoản";
             // 
             // defaultLookAndFeel1
@@ -516,6 +516,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ssni";
             this.Ribbon = this.ribbon;

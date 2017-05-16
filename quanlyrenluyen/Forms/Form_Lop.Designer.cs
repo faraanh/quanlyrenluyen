@@ -315,6 +315,7 @@
             // 
             this.cbbMakhoa.DataSource = this.khoaHocBindingSource;
             this.cbbMakhoa.DisplayMember = "MaKhoa";
+            this.cbbMakhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMakhoa.FormattingEnabled = true;
             this.cbbMakhoa.Location = new System.Drawing.Point(265, 32);
             this.cbbMakhoa.Name = "cbbMakhoa";
@@ -329,6 +330,7 @@
             // 
             // cbbManganh
             // 
+            this.cbbManganh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbManganh.FormattingEnabled = true;
             this.cbbManganh.Location = new System.Drawing.Point(77, 58);
             this.cbbManganh.Name = "cbbManganh";
@@ -399,6 +401,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGrv_Lop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_Lop";
             this.Text = "Quản lý lớp";

@@ -271,6 +271,7 @@
             this.cbbDiemtru.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.diemTruBindingSource, "TenDiemTru", true));
             this.cbbDiemtru.DataSource = this.diemTruBindingSource;
             this.cbbDiemtru.DisplayMember = "TenDiemTru";
+            this.cbbDiemtru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDiemtru.FormattingEnabled = true;
             this.cbbDiemtru.Location = new System.Drawing.Point(345, 73);
             this.cbbDiemtru.Name = "cbbDiemtru";
@@ -293,6 +294,7 @@
             this.cbbDiemcong.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.diemCongBindingSource, "TenDiemCong", true));
             this.cbbDiemcong.DataSource = this.diemCongBindingSource;
             this.cbbDiemcong.DisplayMember = "TenDiemCong";
+            this.cbbDiemcong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDiemcong.FormattingEnabled = true;
             this.cbbDiemcong.Location = new System.Drawing.Point(345, 37);
             this.cbbDiemcong.Name = "cbbDiemcong";
@@ -356,6 +358,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "XtraForm_Thang";
             this.Text = "Rèn luyện";
