@@ -31,6 +31,10 @@ namespace quanlyrenluyen
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            for (int i = 1; i < 50; i++ )
+            {
+                System.Threading.Thread.Sleep(100);
+            }
             Page_quanlychung.Visible = false;
             Page_quanlylop.Visible = false;
             Page_thongke.Visible = false;
@@ -78,12 +82,14 @@ namespace quanlyrenluyen
 
         private void bt_QuanlyTaikhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
+           
             Form_Taikhoan qltk = new Form_Taikhoan();
             qltk.Show();
         }
 
         private void bt_HocVien_ItemClick(object sender, ItemClickEventArgs e)
         {
+            
             XtraForm_Hocvien hv = new XtraForm_Hocvien();
             hv.Show();
         }
@@ -161,9 +167,12 @@ namespace quanlyrenluyen
 
         private void bt_tk_Lop_ItemClick(object sender, ItemClickEventArgs e)
         {
+            
             ReportPrintTool printTool = new ReportPrintTool(new Thongkenamlop());
             printTool.Report.CreateDocument(false);
+            splashScreenManager2.ShowWaitForm();
             printTool.PreviewForm.Load += new EventHandler(PreviewForm_Load);
+            splashScreenManager2.CloseWaitForm();
             printTool.ShowPreviewDialog();
         }
 
@@ -171,7 +180,9 @@ namespace quanlyrenluyen
         {
             ReportPrintTool printTool = new ReportPrintTool(new ThongkeHocvien());
             printTool.Report.CreateDocument(false);
+            splashScreenManager2.ShowWaitForm();
             printTool.PreviewForm.Load += new EventHandler(PreviewForm_Load);
+            splashScreenManager2.CloseWaitForm();
             printTool.ShowPreviewDialog();
         }
 
@@ -179,17 +190,19 @@ namespace quanlyrenluyen
         {
             ReportPrintTool printTool = new ReportPrintTool(new ThongkeThanhtich());
             printTool.Report.CreateDocument(false);
+            splashScreenManager2.ShowWaitForm();
             printTool.PreviewForm.Load += new EventHandler(PreviewForm_Load);
+            splashScreenManager2.CloseWaitForm();
             printTool.ShowPreviewDialog();
-            //ThongkeThanhtich tktt = new ThongkeThanhtich();
-            //tktt.Show();
         }
 
         private void bt_Vipham_ItemClick(object sender, ItemClickEventArgs e)
         {
             ReportPrintTool printTool = new ReportPrintTool(new ThongkeVipham());
             printTool.Report.CreateDocument(false);
+            splashScreenManager2.ShowWaitForm();
             printTool.PreviewForm.Load += new EventHandler(PreviewForm_Load);
+            splashScreenManager2.CloseWaitForm();
             printTool.ShowPreviewDialog();
         }
         void PreviewForm_Load(object sender, EventArgs e)
@@ -212,8 +225,15 @@ namespace quanlyrenluyen
         {
             ReportPrintTool printTool = new ReportPrintTool(new Thongkehockilop());
             printTool.Report.CreateDocument(false);
+            splashScreenManager2.ShowWaitForm();
             printTool.PreviewForm.Load += new EventHandler(PreviewForm_Load);
+            splashScreenManager2.CloseWaitForm();
             printTool.ShowPreviewDialog();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
         }
 
     }

@@ -37,20 +37,12 @@
             System.Windows.Forms.Label queQuanLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm_Hocvien));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maHvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.queQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.hocVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.hocVienTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.HocVienTableAdapter();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtImage = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btChonanh = new DevExpress.XtraEditors.SimpleButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbQuequan = new System.Windows.Forms.TextBox();
@@ -76,6 +68,14 @@
             this.bt_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.fKHocVienLopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm1), true, true);
+            this.maHvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.queQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             maHvLabel = new System.Windows.Forms.Label();
             maLopLabel = new System.Windows.Forms.Label();
             hoTenLabel = new System.Windows.Forms.Label();
@@ -88,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -165,64 +164,13 @@
             this.queQuanDataGridViewTextBoxColumn,
             this.Image});
             this.dataGridView1.DataSource = this.hocVienBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 281);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 263);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(852, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(852, 188);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // maHvDataGridViewTextBoxColumn
-            // 
-            this.maHvDataGridViewTextBoxColumn.DataPropertyName = "MaHv";
-            this.maHvDataGridViewTextBoxColumn.HeaderText = "Mã học viên";
-            this.maHvDataGridViewTextBoxColumn.Name = "maHvDataGridViewTextBoxColumn";
-            this.maHvDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maLopDataGridViewTextBoxColumn
-            // 
-            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
-            this.maLopDataGridViewTextBoxColumn.HeaderText = "Lớp";
-            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
-            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoTenDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.ReadOnly = true;
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // queQuanDataGridViewTextBoxColumn
-            // 
-            this.queQuanDataGridViewTextBoxColumn.DataPropertyName = "QueQuan";
-            this.queQuanDataGridViewTextBoxColumn.HeaderText = "Quê quán";
-            this.queQuanDataGridViewTextBoxColumn.Name = "queQuanDataGridViewTextBoxColumn";
-            this.queQuanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.queQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // Image
-            // 
-            this.Image.DataPropertyName = "Image";
-            this.Image.HeaderText = "Ảnh";
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
             // 
             // hocVienBindingSource
             // 
@@ -242,7 +190,6 @@
             // 
             this.groupControl1.Controls.Add(this.pictureBox1);
             this.groupControl1.Controls.Add(this.txtImage);
-            this.groupControl1.Controls.Add(this.pictureBox2);
             this.groupControl1.Controls.Add(this.btChonanh);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
             this.groupControl1.Controls.Add(this.tbQuequan);
@@ -266,9 +213,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -281,18 +228,9 @@
             this.txtImage.TabIndex = 30;
             this.txtImage.Visible = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(43, 32);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 127);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
             // btChonanh
             // 
-            this.btChonanh.Location = new System.Drawing.Point(59, 165);
+            this.btChonanh.Location = new System.Drawing.Point(56, 185);
             this.btChonanh.Name = "btChonanh";
             this.btChonanh.Size = new System.Drawing.Size(75, 23);
             this.btChonanh.TabIndex = 27;
@@ -529,6 +467,65 @@
             this.fKHocVienLopBindingSource.DataMember = "FK_HocVien_Lop";
             this.fKHocVienLopBindingSource.DataSource = this.lopBindingSource;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // maHvDataGridViewTextBoxColumn
+            // 
+            this.maHvDataGridViewTextBoxColumn.DataPropertyName = "MaHv";
+            this.maHvDataGridViewTextBoxColumn.HeaderText = "Mã học viên";
+            this.maHvDataGridViewTextBoxColumn.Name = "maHvDataGridViewTextBoxColumn";
+            this.maHvDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maHvDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.maHvDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "Lớp";
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoTenDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // queQuanDataGridViewTextBoxColumn
+            // 
+            this.queQuanDataGridViewTextBoxColumn.DataPropertyName = "QueQuan";
+            this.queQuanDataGridViewTextBoxColumn.HeaderText = "Quê quán";
+            this.queQuanDataGridViewTextBoxColumn.Name = "queQuanDataGridViewTextBoxColumn";
+            this.queQuanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.queQuanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Ảnh";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.Visible = false;
+            // 
             // XtraForm_Hocvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +547,6 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -585,7 +581,6 @@
         private DevExpress.XtraEditors.SimpleButton bt_Luu;
         private DevExpress.XtraEditors.SimpleButton bt_Sua;
         private DevExpress.XtraEditors.SimpleButton btChonanh;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtImage;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
@@ -595,6 +590,9 @@
         private DevExpress.XtraEditors.SimpleButton btTimkiem;
         private DevExpress.XtraEditors.SimpleButton btRefresh;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource fKHocVienLopBindingSource;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHvDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
@@ -602,7 +600,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn queQuanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn Image;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource fKHocVienLopBindingSource;
     }
 }

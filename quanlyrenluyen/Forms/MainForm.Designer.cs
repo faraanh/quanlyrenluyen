@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ssni));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.bt_QuanlyTaikhoan = new DevExpress.XtraBars.BarButtonItem();
@@ -82,11 +83,16 @@
             this.bt_Dangxuat = new DevExpress.XtraEditors.SimpleButton();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.splashScreenManager2 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm2), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.grb_Dangnhap.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 500;
             // 
             // ribbon
             // 
@@ -306,9 +312,9 @@
             this.Gr_QuanTri.ItemLinks.Add(this.bt_Gvcn);
             this.Gr_QuanTri.Name = "Gr_QuanTri";
             this.Gr_QuanTri.ShowCaptionButton = false;
-            toolTipTitleItem1.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.Gr_QuanTri.SuperTip = superToolTip1;
+            toolTipTitleItem4.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.Gr_QuanTri.SuperTip = superToolTip4;
             this.Gr_QuanTri.Text = "Quản Trị";
             // 
             // Gr_Nhom
@@ -400,17 +406,17 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            toolTipTitleItem2.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.ribbonPageGroup1.SuperTip = superToolTip2;
+            toolTipTitleItem5.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.ribbonPageGroup1.SuperTip = superToolTip5;
             this.ribbonPageGroup1.Text = "Tài khoản";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            toolTipTitleItem3.Text = "chỉ Lãnh đạo mới có quyền này";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.ribbonPageGroup2.SuperTip = superToolTip3;
+            toolTipTitleItem6.Text = "chỉ Lãnh đạo mới có quyền này";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.ribbonPageGroup2.SuperTip = superToolTip6;
             this.ribbonPageGroup2.Text = "Tài khoản";
             // 
             // defaultLookAndFeel1
@@ -496,6 +502,10 @@
             this.ribbonPageGroup4.ShowCaptionButton = false;
             this.ribbonPageGroup4.Text = "Lớp";
             // 
+            // splashScreenManager2
+            // 
+            this.splashScreenManager2.ClosingDelay = 500;
+            // 
             // ssni
             // 
             this.AllowMdiBar = true;
@@ -509,6 +519,7 @@
             this.MaximizeBox = false;
             this.Name = "ssni";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản lý kết quả rèn luyện học viên T36";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -570,5 +581,6 @@
         private DevExpress.XtraBars.BarButtonItem bt_Phanmem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager2;
     }
 }

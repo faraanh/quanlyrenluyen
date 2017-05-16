@@ -55,6 +55,7 @@
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -70,7 +71,6 @@
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
             this.lop = new DevExpress.XtraReports.Parameters.Parameter();
             this.hocki = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.nam = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -343,6 +343,20 @@
             this.groupHeaderBand2.Name = "groupHeaderBand2";
             this.groupHeaderBand2.StyleName = "DataField";
             // 
+            // xrLabel9
+            // 
+            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.Năm")});
+            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel9.StylePriority.UseBackColor = false;
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.Text = "xrLabel9";
+            // 
             // groupFooterBand2
             // 
             this.groupFooterBand2.HeightF = 30F;
@@ -481,7 +495,6 @@
             dynamicListLookUpSettings1.FilterString = null;
             dynamicListLookUpSettings1.ValueMember = "Lớp";
             this.lop.LookUpSettings = dynamicListLookUpSettings1;
-            this.lop.MultiValue = true;
             this.lop.Name = "lop";
             // 
             // hocki
@@ -497,20 +510,6 @@
             this.hocki.MultiValue = true;
             this.hocki.Name = "hocki";
             this.hocki.Type = typeof(int);
-            // 
-            // xrLabel9
-            // 
-            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.Năm")});
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 14F);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel9.StylePriority.UseBackColor = false;
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.Text = "xrLabel9";
             // 
             // nam
             // 
@@ -544,7 +543,7 @@
             this.sqlDataSource1});
             this.DataMember = "Query";
             this.DataSource = this.sqlDataSource1;
-            this.FilterString = "[Lớp] In (?lop) And [Học kì] In (?hocki) And [Năm] In (?nam)";
+            this.FilterString = "[Lớp] = ?lop And [Học kì] In (?hocki) And [Năm] In (?nam)";
             this.Margins = new System.Drawing.Printing.Margins(100, 0, 100, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.lop,
@@ -600,5 +599,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.Parameters.Parameter nam;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

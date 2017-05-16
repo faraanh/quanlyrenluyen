@@ -28,40 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label maNganhLabel;
             System.Windows.Forms.Label tenChuyenNganhLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ChuyenNganh));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_ChuyenNganh = new System.Windows.Forms.DataGridView();
+            this.maNganhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenChuyenNganhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chuyenNganhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.bt_them = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
-            this.gvcnBindingSource = new System.Windows.Forms.BindingSource();
+            this.gvcnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvcnTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.GvcnTableAdapter();
             this.tableAdapterManager = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TableAdapterManager();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.maNganhTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.chuyenNganhBindingSource = new System.Windows.Forms.BindingSource();
             this.tenChuyenNganhTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.chuyenNganhTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.ChuyenNganhTableAdapter();
-            this.maNganhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenChuyenNganhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maNganhLabel = new System.Windows.Forms.Label();
             tenChuyenNganhLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_ChuyenNganh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chuyenNganhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maNganhTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chuyenNganhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenChuyenNganhTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +108,32 @@
             this.dataGrv_ChuyenNganh.Size = new System.Drawing.Size(241, 190);
             this.dataGrv_ChuyenNganh.TabIndex = 0;
             this.dataGrv_ChuyenNganh.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_ChuyenNganh_CellEnter);
+            // 
+            // maNganhDataGridViewTextBoxColumn
+            // 
+            this.maNganhDataGridViewTextBoxColumn.DataPropertyName = "MaNganh";
+            this.maNganhDataGridViewTextBoxColumn.HeaderText = "Mã ngành";
+            this.maNganhDataGridViewTextBoxColumn.Name = "maNganhDataGridViewTextBoxColumn";
+            this.maNganhDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maNganhDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tenChuyenNganhDataGridViewTextBoxColumn
+            // 
+            this.tenChuyenNganhDataGridViewTextBoxColumn.DataPropertyName = "TenChuyenNganh";
+            this.tenChuyenNganhDataGridViewTextBoxColumn.HeaderText = "Tên chuyên ngành";
+            this.tenChuyenNganhDataGridViewTextBoxColumn.Name = "tenChuyenNganhDataGridViewTextBoxColumn";
+            this.tenChuyenNganhDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenChuyenNganhDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // chuyenNganhBindingSource
+            // 
+            this.chuyenNganhBindingSource.DataMember = "ChuyenNganh";
+            this.chuyenNganhBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupControl1
             // 
@@ -170,11 +197,6 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Danh sách chuyên ngành:";
             // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gvcnTableAdapter
             // 
             this.gvcnTableAdapter.ClearBeforeFill = true;
@@ -213,11 +235,6 @@
             this.maNganhTextEdit.Size = new System.Drawing.Size(126, 20);
             this.maNganhTextEdit.TabIndex = 1;
             // 
-            // chuyenNganhBindingSource
-            // 
-            this.chuyenNganhBindingSource.DataMember = "ChuyenNganh";
-            this.chuyenNganhBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
             // tenChuyenNganhTextEdit
             // 
             this.tenChuyenNganhTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.chuyenNganhBindingSource, "TenChuyenNganh", true));
@@ -229,22 +246,6 @@
             // chuyenNganhTableAdapter
             // 
             this.chuyenNganhTableAdapter.ClearBeforeFill = true;
-            // 
-            // maNganhDataGridViewTextBoxColumn
-            // 
-            this.maNganhDataGridViewTextBoxColumn.DataPropertyName = "MaNganh";
-            this.maNganhDataGridViewTextBoxColumn.HeaderText = "Mã ngành";
-            this.maNganhDataGridViewTextBoxColumn.Name = "maNganhDataGridViewTextBoxColumn";
-            this.maNganhDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maNganhDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tenChuyenNganhDataGridViewTextBoxColumn
-            // 
-            this.tenChuyenNganhDataGridViewTextBoxColumn.DataPropertyName = "TenChuyenNganh";
-            this.tenChuyenNganhDataGridViewTextBoxColumn.HeaderText = "Tên chuyên ngành";
-            this.tenChuyenNganhDataGridViewTextBoxColumn.Name = "tenChuyenNganhDataGridViewTextBoxColumn";
-            this.tenChuyenNganhDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenChuyenNganhDataGridViewTextBoxColumn.Width = 130;
             // 
             // Form_ChuyenNganh
             // 
@@ -259,17 +260,18 @@
             this.MaximizeBox = false;
             this.Name = "Form_ChuyenNganh";
             this.Text = "Quản lý chuyên ngành";
+
             this.Load += new System.EventHandler(this.Form_ChuyenNganh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_ChuyenNganh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chuyenNganhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maNganhTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chuyenNganhBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenChuyenNganhTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

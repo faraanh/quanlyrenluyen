@@ -10,6 +10,7 @@ namespace quanlyrenluyen.Forms
     {
         public Thongkehockilop()
         {
+       
             InitializeComponent();
         }
 

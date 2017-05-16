@@ -93,6 +93,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from DiemCong where MaDiemCong='" + dc.Madiem + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã điểm cộng này", "Lỗi");
+                    else if (b.CheckID("select MaDiemCong from Diem") > 0)
+                        MessageBox.Show("Không xóa được Mã điểm cộng này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Theo dõi rèn luyện", "Lỗi");
                     else
                         b.QueryIDU("delete from DiemCong where MaDiemCong='" + dc.Madiem + "'");
                 }

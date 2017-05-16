@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Taikhoan));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_Taikhoan = new System.Windows.Forms.DataGridView();
+            this.maTkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phanQuyenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tb_Matkhau = new System.Windows.Forms.TextBox();
             this.tb_Phanquyen = new System.Windows.Forms.TextBox();
@@ -45,18 +51,13 @@
             this.bt_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
-            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource();
             this.taiKhoanTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TaiKhoanTableAdapter();
-            this.maTkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phanQuyenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Taikhoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -84,6 +85,37 @@
             this.dataGrv_Taikhoan.Size = new System.Drawing.Size(336, 153);
             this.dataGrv_Taikhoan.TabIndex = 0;
             this.dataGrv_Taikhoan.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_Taikhoan_CellEnter);
+            // 
+            // maTkDataGridViewTextBoxColumn
+            // 
+            this.maTkDataGridViewTextBoxColumn.DataPropertyName = "MaTk";
+            this.maTkDataGridViewTextBoxColumn.HeaderText = "Mã tài khoản";
+            this.maTkDataGridViewTextBoxColumn.Name = "maTkDataGridViewTextBoxColumn";
+            this.maTkDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // matKhauDataGridViewTextBoxColumn
+            // 
+            this.matKhauDataGridViewTextBoxColumn.DataPropertyName = "MatKhau";
+            this.matKhauDataGridViewTextBoxColumn.HeaderText = "Mật khẩu";
+            this.matKhauDataGridViewTextBoxColumn.Name = "matKhauDataGridViewTextBoxColumn";
+            this.matKhauDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phanQuyenDataGridViewTextBoxColumn
+            // 
+            this.phanQuyenDataGridViewTextBoxColumn.DataPropertyName = "PhanQuyen";
+            this.phanQuyenDataGridViewTextBoxColumn.HeaderText = "Phân Quyền";
+            this.phanQuyenDataGridViewTextBoxColumn.Name = "phanQuyenDataGridViewTextBoxColumn";
+            this.phanQuyenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // taiKhoanBindingSource
+            // 
+            this.taiKhoanBindingSource.DataMember = "TaiKhoan";
+            this.taiKhoanBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -211,40 +243,9 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Danh sách tài khoản:";
             // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // taiKhoanBindingSource
-            // 
-            this.taiKhoanBindingSource.DataMember = "TaiKhoan";
-            this.taiKhoanBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
             // taiKhoanTableAdapter
             // 
             this.taiKhoanTableAdapter.ClearBeforeFill = true;
-            // 
-            // maTkDataGridViewTextBoxColumn
-            // 
-            this.maTkDataGridViewTextBoxColumn.DataPropertyName = "MaTk";
-            this.maTkDataGridViewTextBoxColumn.HeaderText = "Mã tài khoản";
-            this.maTkDataGridViewTextBoxColumn.Name = "maTkDataGridViewTextBoxColumn";
-            this.maTkDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // matKhauDataGridViewTextBoxColumn
-            // 
-            this.matKhauDataGridViewTextBoxColumn.DataPropertyName = "MatKhau";
-            this.matKhauDataGridViewTextBoxColumn.HeaderText = "Mật khẩu";
-            this.matKhauDataGridViewTextBoxColumn.Name = "matKhauDataGridViewTextBoxColumn";
-            this.matKhauDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // phanQuyenDataGridViewTextBoxColumn
-            // 
-            this.phanQuyenDataGridViewTextBoxColumn.DataPropertyName = "PhanQuyen";
-            this.phanQuyenDataGridViewTextBoxColumn.HeaderText = "Phân Quyền";
-            this.phanQuyenDataGridViewTextBoxColumn.Name = "phanQuyenDataGridViewTextBoxColumn";
-            this.phanQuyenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form_Taikhoan
             // 
@@ -259,14 +260,15 @@
             this.MaximizeBox = false;
             this.Name = "Form_Taikhoan";
             this.Text = "Tài khoản";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Taikhoan_FormClosed);
             this.Load += new System.EventHandler(this.Form_Taikhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Taikhoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

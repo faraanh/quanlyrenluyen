@@ -114,6 +114,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from TaiKhoan where MaTk='" + Tkhoan.MaTk1 + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã tài khoản này", "Lỗi");
+                    else if (b.CheckID("select MaTk from Gvcn") > 0)
+                        MessageBox.Show("Không xóa được Tài khoản này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu của Gvcn", "Lỗi");
                     else
                         b.QueryIDU("delete from TaiKhoan where MaTk='" + Tkhoan.MaTk1 + "'");
                 }
@@ -126,6 +128,11 @@ namespace quanlyrenluyen.Forms
             {
                 MessageBox.Show(ex.Message.ToString(), "Lỗi");
             }
+        }
+
+        private void Form_Taikhoan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
         }
     }
 }

@@ -26,6 +26,11 @@ namespace quanlyrenluyen.Forms
 
         private void XtraForm_Thang_Load(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
+            for (int i = 1; i < 20; i++)
+            {
+                System.Threading.Thread.Sleep(100);
+            }
             // TODO: This line of code loads data into the 'ketquarenluyenDataSet2.renluyen' table. You can move, or remove it, as needed.
             this.renluyenTableAdapter.Fill(this.ketquarenluyenDataSet2.renluyen);
             // TODO: This line of code loads data into the 'ketquarenluyenDataSet1.View_1' table. You can move, or remove it, as needed.
@@ -35,6 +40,7 @@ namespace quanlyrenluyen.Forms
             // TODO: This line of code loads data into the 'ketquarenluyenDataSet.DiemTru' table. You can move, or remove it, as needed.
             this.diemTruTableAdapter.Fill(this.ketquarenluyenDataSet.DiemTru);
             Load_Data();
+            splashScreenManager1.CloseWaitForm();
         }
         public void Load_Data()
         {

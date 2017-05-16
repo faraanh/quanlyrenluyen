@@ -91,6 +91,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from Gvcn where MaGvcn='" + gv.MaGvcn1 + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã Gvcn này", "Lỗi");
+                    else if (b.CheckID("select MaGvcn from Lop") > 0)
+                        MessageBox.Show("Không xóa được Gvcn này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Lớp", "Lỗi");
                     else
                         b.QueryIDU("delete from Gvcn where MaGvcn='" + gv.MaGvcn1 + "'");
                 }

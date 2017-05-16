@@ -21,6 +21,7 @@ namespace quanlyrenluyen
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
             Application.Run(new ssni());
+            
         }
     }
 }

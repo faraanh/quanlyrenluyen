@@ -12,6 +12,7 @@ using quanlyrenluyen.DataAccess;
 using System.Data.SqlClient;
 using quanlyrenluyen.Entity;
 using quanlyrenluyen.Business;
+using quanlyrenluyen.Forms;
 
 namespace quanlyrenluyen.Forms
 {
@@ -85,6 +86,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from ChuyenNganh where MaNganh='" + cn.Manganh1 + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã Chuyên ngành này", "Lỗi");
+                    else if (b.CheckID("select MaNganh from Lop") > 0)
+                        MessageBox.Show("Không xóa được Chuyên ngành này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Lớp", "Lỗi");
                     else
                         b.QueryIDU("delete from cncn where Macncn='" + cn.Manganh1 + "'");
                 }
@@ -121,5 +124,7 @@ namespace quanlyrenluyen.Forms
             }
         
         }
+
+       
     }
 }

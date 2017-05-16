@@ -62,6 +62,7 @@
             this.view1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_1TableAdapter = new quanlyrenluyen.ketquarenluyenDataSet1TableAdapters.View_1TableAdapter();
             this.renluyenTableAdapter = new quanlyrenluyen.ketquarenluyenDataSet2TableAdapters.renluyenTableAdapter();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm1), true, true);
             maHvLabel = new System.Windows.Forms.Label();
             maDiemTruLabel = new System.Windows.Forms.Label();
             maDiemCongLabel = new System.Windows.Forms.Label();
@@ -257,7 +258,6 @@
             this.groupControl2.Size = new System.Drawing.Size(577, 109);
             this.groupControl2.TabIndex = 29;
             this.groupControl2.Text = "Thông tin điểm học viên";
-            
             // 
             // dateTimePicker1
             // 
@@ -343,6 +343,10 @@
             // 
             this.renluyenTableAdapter.ClearBeforeFill = true;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // XtraForm_Thang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,5 +409,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngàyGhiNhậnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thànhTíchDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn viPhạmDataGridViewTextBoxColumn;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -32,9 +32,11 @@ namespace quanlyrenluyen.Forms
         private void Form_Gvcn_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ketquarenluyenDataSet.DiemTru' table. You can move, or remove it, as needed.
+            splashScreenManager1.ShowWaitForm();
             this.diemTruTableAdapter.Fill(this.ketquarenluyenDataSet.DiemTru);
             Load_Data();
             bt_Luu.Enabled = false;
+            splashScreenManager1.CloseWaitForm();
         }
         public void Load_Data()
         {
@@ -90,6 +92,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from DiemTru where MaDiemTru='" + dc.Madiem + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã điểm cộng này", "Lỗi");
+                    else if (b.CheckID("select MaDiemTru from Diem") > 0)
+                        MessageBox.Show("Không xóa được Mã điểm trừ này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Theo dõi rèn luyện", "Lỗi");
                     else
                         b.QueryIDU("delete from DiemTru where MaDiemTru='" + dc.Madiem + "'");
                 }

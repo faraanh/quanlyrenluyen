@@ -85,6 +85,8 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from KhoaHoc where MaKhoa='" + kh.MaKhoa1 + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã Khóa học này", "Lỗi");
+                    else if (b.CheckID("select MaKhoa from Lop") > 0)
+                        MessageBox.Show("Không xóa được Khóa học này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu của Lớp", "Lỗi");
                     else
                         b.QueryIDU("delete from KhoaHoc where MaKhoa='" + kh.MaKhoa1 + "'");
                 }

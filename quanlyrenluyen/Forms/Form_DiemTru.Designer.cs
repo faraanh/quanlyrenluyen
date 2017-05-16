@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label maDiemTruLabel;
             System.Windows.Forms.Label tenDiemTruLabel;
             System.Windows.Forms.Label diemTruLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DiemTru));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm1), true, true);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.dataGrv_Diemtru = new System.Windows.Forms.DataGridView();
+            this.maDiemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDiemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemTruBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.bt_them = new DevExpress.XtraEditors.SimpleButton();
             this.bt_Xoa = new DevExpress.XtraEditors.SimpleButton();
@@ -43,30 +50,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.maDiemTruTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.diemTruBindingSource = new System.Windows.Forms.BindingSource();
-            this.ketquarenluyenDataSet = new quanlyrenluyen.ketquarenluyenDataSet();
             this.tenDiemTruTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.diemTruTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.diemCongBindingSource = new System.Windows.Forms.BindingSource();
-            this.gvcnBindingSource = new System.Windows.Forms.BindingSource();
+            this.diemCongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvcnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvcnTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.GvcnTableAdapter();
             this.tableAdapterManager = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.TableAdapterManager();
             this.diemCongTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.DiemCongTableAdapter();
             this.diemTruTableAdapter = new quanlyrenluyen.ketquarenluyenDataSetTableAdapters.DiemTruTableAdapter();
-            this.maDiemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDiemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemTruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maDiemTruLabel = new System.Windows.Forms.Label();
             tenDiemTruLabel = new System.Windows.Forms.Label();
             diemTruLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Diemtru)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemTruBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maDiemTruTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemTruBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDiemTruTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diemTruTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).BeginInit();
@@ -100,6 +102,10 @@
             diemTruLabel.TabIndex = 4;
             diemTruLabel.Text = "Điểm trừ:";
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Money Twins";
@@ -125,6 +131,40 @@
             this.dataGrv_Diemtru.Size = new System.Drawing.Size(326, 237);
             this.dataGrv_Diemtru.TabIndex = 0;
             this.dataGrv_Diemtru.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrv_Gvcn_CellEnter);
+            // 
+            // maDiemTruDataGridViewTextBoxColumn
+            // 
+            this.maDiemTruDataGridViewTextBoxColumn.DataPropertyName = "MaDiemTru";
+            this.maDiemTruDataGridViewTextBoxColumn.HeaderText = "Mã điểm trừ";
+            this.maDiemTruDataGridViewTextBoxColumn.Name = "maDiemTruDataGridViewTextBoxColumn";
+            this.maDiemTruDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maDiemTruDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tenDiemTruDataGridViewTextBoxColumn
+            // 
+            this.tenDiemTruDataGridViewTextBoxColumn.DataPropertyName = "TenDiemTru";
+            this.tenDiemTruDataGridViewTextBoxColumn.HeaderText = "Tên điểm trừ";
+            this.tenDiemTruDataGridViewTextBoxColumn.Name = "tenDiemTruDataGridViewTextBoxColumn";
+            this.tenDiemTruDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenDiemTruDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // diemTruDataGridViewTextBoxColumn
+            // 
+            this.diemTruDataGridViewTextBoxColumn.DataPropertyName = "DiemTru";
+            this.diemTruDataGridViewTextBoxColumn.HeaderText = "Điểm trừ";
+            this.diemTruDataGridViewTextBoxColumn.Name = "diemTruDataGridViewTextBoxColumn";
+            this.diemTruDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diemTruDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // diemTruBindingSource
+            // 
+            this.diemTruBindingSource.DataMember = "DiemTru";
+            this.diemTruBindingSource.DataSource = this.ketquarenluyenDataSet;
+            // 
+            // ketquarenluyenDataSet
+            // 
+            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
+            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupControl1
             // 
@@ -210,16 +250,6 @@
             this.maDiemTruTextEdit.Size = new System.Drawing.Size(166, 20);
             this.maDiemTruTextEdit.TabIndex = 1;
             // 
-            // diemTruBindingSource
-            // 
-            this.diemTruBindingSource.DataMember = "DiemTru";
-            this.diemTruBindingSource.DataSource = this.ketquarenluyenDataSet;
-            // 
-            // ketquarenluyenDataSet
-            // 
-            this.ketquarenluyenDataSet.DataSetName = "ketquarenluyenDataSet";
-            this.ketquarenluyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tenDiemTruTextEdit
             // 
             this.tenDiemTruTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.diemTruBindingSource, "TenDiemTru", true));
@@ -272,30 +302,6 @@
             // 
             this.diemTruTableAdapter.ClearBeforeFill = true;
             // 
-            // maDiemTruDataGridViewTextBoxColumn
-            // 
-            this.maDiemTruDataGridViewTextBoxColumn.DataPropertyName = "MaDiemTru";
-            this.maDiemTruDataGridViewTextBoxColumn.HeaderText = "Mã điểm trừ";
-            this.maDiemTruDataGridViewTextBoxColumn.Name = "maDiemTruDataGridViewTextBoxColumn";
-            this.maDiemTruDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maDiemTruDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // tenDiemTruDataGridViewTextBoxColumn
-            // 
-            this.tenDiemTruDataGridViewTextBoxColumn.DataPropertyName = "TenDiemTru";
-            this.tenDiemTruDataGridViewTextBoxColumn.HeaderText = "Tên điểm trừ";
-            this.tenDiemTruDataGridViewTextBoxColumn.Name = "tenDiemTruDataGridViewTextBoxColumn";
-            this.tenDiemTruDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenDiemTruDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // diemTruDataGridViewTextBoxColumn
-            // 
-            this.diemTruDataGridViewTextBoxColumn.DataPropertyName = "DiemTru";
-            this.diemTruDataGridViewTextBoxColumn.HeaderText = "Điểm trừ";
-            this.diemTruDataGridViewTextBoxColumn.Name = "diemTruDataGridViewTextBoxColumn";
-            this.diemTruDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diemTruDataGridViewTextBoxColumn.Width = 80;
-            // 
             // Form_DiemTru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,14 +317,14 @@
             this.Text = "Quản lý điểm trừ";
             this.Load += new System.EventHandler(this.Form_Gvcn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrv_Diemtru)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemTruBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maDiemTruTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemTruBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDiemTruTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diemTruTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diemCongBindingSource)).EndInit();
@@ -354,5 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maDiemTruDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDiemTruDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diemTruDataGridViewTextBoxColumn;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
