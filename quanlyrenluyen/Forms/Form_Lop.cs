@@ -143,7 +143,7 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from Lop where MaLop='" + lop.Malop + "'") == 0)
                         MessageBox.Show("Không tồn tại Mã Lớp này", "Lỗi");
-                    else if (b.CheckID("select MaLop from HocVien") > 0)
+                    else if (b.CheckID("select MaLop from HocVien where MaLop='" + lop.Malop + "'") > 0)
                         MessageBox.Show("Không xóa được Lớp này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Học viên", "Lỗi");
                     else
                         b.QueryIDU("delete from Lop where MaLop='" + lop.Malop + "'");

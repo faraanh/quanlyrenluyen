@@ -45,9 +45,9 @@ namespace quanlyrenluyen
         bool checkpass()
         {
             for (int i = 0; i < MatKhau.Length; i++)
-                if (MatKhau[i].Equals(' ')) return false;
+                if (MatKhau[i].Equals(' ') || MatKhau[i].Equals('\'') || MatKhau[i].Equals('=')) return false;
             for (int i = 0; i < TaiKhoan.Length; i++)
-                if (TaiKhoan[i].Equals(' ')) return false;
+                if (TaiKhoan[i].Equals(' ') || TaiKhoan[i].Equals('\'') || TaiKhoan[i].Equals('=')) return false;
             return true;
         }
 
@@ -69,6 +69,13 @@ namespace quanlyrenluyen
                 {
                     MessageBox.Show("Đã đăng nhập với quyền Admin", "Đăng nhập thành công");
                     Page_quanlychung.Visible = true;
+                    bt_ChuyenNganh.Enabled = true;
+                    bt_QuanlyTaikhoan.Enabled = true;
+                    bt_Gvcn.Enabled = true;
+                    bt_Khoa.Enabled = true;
+                    bt_Lop.Enabled = true;
+                    bt_DiemCong.Enabled = true;
+                    bt_DiemTru.Enabled = true;
                     Page_quanlylop.Visible = true;
                     Page_thongke.Visible = true;
                     bt_Dangxuat.Enabled = true;
@@ -80,7 +87,14 @@ namespace quanlyrenluyen
                 {
                     MessageBox.Show("Đã đăng nhập với quyền User", "Đăng nhập thành công");
                     // tiep tuc cac tuy chon o day
-                    Page_quanlychung.Visible = false;
+                    Page_quanlychung.Visible = true;
+                    bt_ChuyenNganh.Enabled = false;
+                    bt_QuanlyTaikhoan.Enabled = false;
+                    bt_Gvcn.Enabled = false;
+                    bt_Khoa.Enabled = false;
+                    bt_Lop.Enabled = false;
+                    bt_DiemCong.Enabled = false;
+                    bt_DiemTru.Enabled = false;
                     Page_quanlylop.Visible = true;
                     Page_thongke.Visible = true;
                     bt_Dangxuat.Enabled = true;

@@ -317,11 +317,13 @@
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.Lớp")});
             this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 24F);
+            this.xrLabel7.ForeColor = System.Drawing.Color.Blue;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(560.144F, 0F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(143.2198F, 41F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(97.38647F, 41F);
             this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseForeColor = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.Text = "xrLabel7";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -352,7 +354,7 @@
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(106.3333F, 23F);
             this.xrLabel9.StylePriority.UseBackColor = false;
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.Text = "xrLabel9";
@@ -435,10 +437,10 @@
             // 
             // xrLabel19
             // 
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(5.999994F, 1.999982F);
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(23.70833F, 1.999982F);
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(554.144F, 39F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(536.4357F, 39F);
             this.xrLabel19.StyleName = "Title";
             this.xrLabel19.StylePriority.UseTextAlignment = false;
             this.xrLabel19.Text = "ĐIỂM TRUNG BÌNH HỌC KÌ LỚP:";

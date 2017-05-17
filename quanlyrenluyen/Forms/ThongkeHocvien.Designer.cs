@@ -81,6 +81,10 @@
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.tbhocki = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
+            this.tbnam = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // sqlDataSource1
@@ -309,6 +313,7 @@
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel25,
             this.xrLabel9,
             this.xrLabel10});
             this.groupFooterBand1.HeightF = 84.74535F;
@@ -393,9 +398,10 @@
             // groupFooterBand3
             // 
             this.groupFooterBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel24,
             this.xrLabel15,
             this.xrLabel16});
-            this.groupFooterBand3.HeightF = 39.375F;
+            this.groupFooterBand3.HeightF = 39.37501F;
             this.groupFooterBand3.Name = "groupFooterBand3";
             // 
             // xrLabel15
@@ -657,6 +663,50 @@
             this.bottomMarginBand1.HeightF = 100F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
+            // tbhocki
+            // 
+            this.tbhocki.DataMember = "Query";
+            this.tbhocki.Expression = resources.GetString("tbhocki.Expression");
+            this.tbhocki.Name = "tbhocki";
+            // 
+            // xrLabel24
+            // 
+            this.xrLabel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.xrLabel24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.tbhocki")});
+            this.xrLabel24.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(332.1999F, 6.00001F);
+            this.xrLabel24.Name = "xrLabel24";
+            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel24.SizeF = new System.Drawing.SizeF(117.2916F, 33.37497F);
+            this.xrLabel24.StylePriority.UseBackColor = false;
+            this.xrLabel24.StylePriority.UseFont = false;
+            this.xrLabel24.StylePriority.UseTextAlignment = false;
+            this.xrLabel24.Text = "xrLabel24";
+            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // tbnam
+            // 
+            this.tbnam.DataMember = "Query";
+            this.tbnam.Expression = resources.GetString("tbnam.Expression");
+            this.tbnam.Name = "tbnam";
+            // 
+            // xrLabel25
+            // 
+            this.xrLabel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.xrLabel25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.tbnam")});
+            this.xrLabel25.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(332.1999F, 6.00001F);
+            this.xrLabel25.Name = "xrLabel25";
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(117.2917F, 31.29167F);
+            this.xrLabel25.StylePriority.UseBackColor = false;
+            this.xrLabel25.StylePriority.UseFont = false;
+            this.xrLabel25.StylePriority.UseTextAlignment = false;
+            this.xrLabel25.Text = "xrLabel25";
+            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
             // ThongkeHocvien
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -672,6 +722,9 @@
             this.reportHeaderBand1,
             this.topMarginBand1,
             this.bottomMarginBand1});
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.tbhocki,
+            this.tbnam});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
             this.DataMember = "Query";
@@ -742,5 +795,9 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel25;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel24;
+        private DevExpress.XtraReports.UI.CalculatedField tbhocki;
+        private DevExpress.XtraReports.UI.CalculatedField tbnam;
     }
 }

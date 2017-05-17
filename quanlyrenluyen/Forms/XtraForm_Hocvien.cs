@@ -155,11 +155,11 @@ namespace quanlyrenluyen.Forms
                 {
                     if (b.CheckID("select * from HocVien where MaHv='" + hv.MaHv1 + "'") == 0)
                         MessageBox.Show("Chưa tồn tại Mã học viên này ", "Lỗi");
-                    else if (b.CheckID("select MaHv from Diem") > 0)
+                    else if (b.CheckID("select MaHv from Diem where  MaHv='" + hv.MaHv1 + "'") > 0)
                         MessageBox.Show("Không xóa được Học viên này \nĐể thực hiện cần xóa hết dữ liệu tham chiếu!\nDữ liệu tham chiếu được tìm thấy trong Cơ sở dữ liệu Theo dõi rèn luyện", "Lỗi");
                     else
                     {
-                        b.QueryIDU("delete from HocVien where  MaLop='" + hv.MaLop1 + "'");
+                        b.QueryIDU("delete from HocVien where  MaHv='" + hv.MaHv1+ "'");
                     }
                 }
                 //-----------------------------------------------

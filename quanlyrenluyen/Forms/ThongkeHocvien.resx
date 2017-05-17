@@ -132,4 +132,10 @@ GROUP BY dbo.HocVien.HoTen, dbo.HocVien.MaLop, YEAR(dbo.Diem.ThangNam), MONTH(db
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iTOG7m3AiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSOG7jWMgdmnDqm4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTsSDbSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IsSQaeG7g20iIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iVGjDoW5nIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iSOG7jWMga8OsIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iWGVwTG9haSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
   </data>
+  <data name="tbhocki.Expression" xml:space="preserve">
+    <value>Iif([].Avg([Điểm]) &gt;= 9,'Xuất sắc',Iif([].Avg([Điểm]) &gt;= 8,'Tốt',Iif([].Avg([Điểm]) &gt;= 8,'Khá',Iif([].Avg([Điểm]) &gt;= 9,'Xuất sắc',Iif([].Avg([Điểm]) &gt;= 8,'Tốt',Iif([].Avg([Điểm]) &gt;= 7,'Khá',Iif([].Avg([Điểm]) &gt;= 6,'Trung bình khá',Iif([].Avg([Điểm]) &gt;=5 ,'Trung bình',Iif([].Avg([Điểm]) &gt;= 4,'Yếu','Kém' )) )) )))))</value>
+  </data>
+  <data name="tbnam.Expression" xml:space="preserve">
+    <value>Iif([].Avg([Điểm]) &gt;= 9,'Xuất sắc',Iif([].Avg([Điểm]) &gt;= 8,'Tốt',Iif([].Avg([Điểm]) &gt;= 8,'Khá',Iif([].Avg([Điểm]) &gt;= 9,'Xuất sắc',Iif([].Avg([Điểm]) &gt;= 8,'Tốt',Iif([].Avg([Điểm]) &gt;= 7,'Khá',Iif([].Avg([Điểm]) &gt;= 6,'Trung bình khá',Iif([].Avg([Điểm]) &gt;=5 ,'Trung bình',Iif([].Avg([Điểm]) &gt;= 4,'Yếu','Kém' )) )) )))))</value>
+  </data>
 </root>
