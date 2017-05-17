@@ -367,7 +367,7 @@
             this.groupBox2.Controls.Add(this.cbbTimkiem);
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(7, 75);
+            this.groupBox2.Location = new System.Drawing.Point(10, 81);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(535, 84);
             this.groupBox2.TabIndex = 31;
@@ -377,7 +377,7 @@
             // btRefresh
             // 
             this.btRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btRefresh.Image")));
-            this.btRefresh.Location = new System.Drawing.Point(412, 25);
+            this.btRefresh.Location = new System.Drawing.Point(419, 35);
             this.btRefresh.Name = "btRefresh";
             this.btRefresh.Size = new System.Drawing.Size(93, 39);
             this.btRefresh.TabIndex = 34;
@@ -388,7 +388,7 @@
             // 
             this.btTimkiem.Enabled = false;
             this.btTimkiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimkiem.Image")));
-            this.btTimkiem.Location = new System.Drawing.Point(140, 25);
+            this.btTimkiem.Location = new System.Drawing.Point(151, 35);
             this.btTimkiem.Name = "btTimkiem";
             this.btTimkiem.Size = new System.Drawing.Size(93, 39);
             this.btTimkiem.TabIndex = 33;
@@ -398,7 +398,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(257, 21);
+            this.label10.Location = new System.Drawing.Point(262, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 21);
             this.label10.TabIndex = 32;
@@ -407,7 +407,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 21);
+            this.label9.Location = new System.Drawing.Point(14, 26);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 21);
             this.label9.TabIndex = 31;
@@ -422,7 +422,7 @@
             "Học viên",
             "Tháng",
             "Năm"});
-            this.cbbTimkiem.Location = new System.Drawing.Point(255, 44);
+            this.cbbTimkiem.Location = new System.Drawing.Point(265, 50);
             this.cbbTimkiem.Name = "cbbTimkiem";
             this.cbbTimkiem.Size = new System.Drawing.Size(132, 24);
             this.cbbTimkiem.TabIndex = 30;
@@ -430,7 +430,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(6, 42);
+            this.txtTimKiem.Location = new System.Drawing.Point(17, 52);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(128, 22);
             this.txtTimKiem.TabIndex = 9;
