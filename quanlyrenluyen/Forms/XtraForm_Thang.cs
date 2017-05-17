@@ -166,6 +166,47 @@ namespace quanlyrenluyen.Forms
             key = 3;
             bt_Luu.Enabled = true;
         }
+
+        private void btRefresh_Click(object sender, EventArgs e)
+        {
+            Load_Data();
+        }
+
+        private void btTimkiem_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            string dk = txtTimKiem.Text.Trim();
+            BLL b = new BLL();
+            DataConfig config = new DataConfig();
+            if (this.txtTimKiem.Text.Length == 0)
+                MessageBox.Show("Bạn chưa nhập từ khóa tìm kiếm");
+            else if (cbbTimkiem.Text == "Học viên")
+            {
+                string MaHv = b.GetValues("select MaHv from Hocvien Where HoTen like N'%" + dk + "%'",0,0);
+                string strsql = "SELECT dbo.HocVien.HoTen AS [Họ tên], dbo.Diem.ThangNam AS [Ngày ghi nhận], dbo.DiemCong.TenDiemCong AS [Thành tích], dbo.DiemTru.TenDiemTru AS [Vi phạm] FROM dbo.Diem INNER JOIN dbo.DiemCong ON dbo.Diem.MaDiemCong = dbo.DiemCong.MaDiemCong LEFT OUTER JOIN  dbo.DiemTru ON dbo.Diem.MaDiemTru = dbo.DiemTru.MaDiemTru LEFT OUTER JOIN  dbo.HocVien ON dbo.Diem.MaHv = dbo.HocVien.MaHv where Hocvien.MaHv = '" + MaHv + "'";
+                dataGridView1.DataSource = config.GetData(strsql);
+            }
+            else if (cbbTimkiem.Text == "Tháng")
+            {
+                
+                string strsql = "SELECT dbo.HocVien.HoTen AS [Họ tên], dbo.Diem.ThangNam AS [Ngày ghi nhận], dbo.DiemCong.TenDiemCong AS [Thành tích], dbo.DiemTru.TenDiemTru AS [Vi phạm] FROM dbo.Diem INNER JOIN dbo.DiemCong ON dbo.Diem.MaDiemCong = dbo.DiemCong.MaDiemCong LEFT OUTER JOIN  dbo.DiemTru ON dbo.Diem.MaDiemTru = dbo.DiemTru.MaDiemTru LEFT OUTER JOIN  dbo.HocVien ON dbo.Diem.MaHv = dbo.HocVien.MaHv where month(ThangNam) like '" + txtTimKiem.Text + "'";
+                dataGridView1.DataSource = config.GetData(strsql);
+            }
+            else if (cbbTimkiem.Text == "Năm")
+            {
+                string strsql = "SELECT dbo.HocVien.HoTen AS [Họ tên], dbo.Diem.ThangNam AS [Ngày ghi nhận], dbo.DiemCong.TenDiemCong AS [Thành tích], dbo.DiemTru.TenDiemTru AS [Vi phạm] FROM dbo.Diem INNER JOIN dbo.DiemCong ON dbo.Diem.MaDiemCong = dbo.DiemCong.MaDiemCong LEFT OUTER JOIN  dbo.DiemTru ON dbo.Diem.MaDiemTru = dbo.DiemTru.MaDiemTru LEFT OUTER JOIN  dbo.HocVien ON dbo.Diem.MaHv = dbo.HocVien.MaHv where year(ThangNam) like '" + txtTimKiem.Text + "'";
+                dataGridView1.DataSource = config.GetData(strsql);
+            }
+            else
+            {
+                MessageBox.Show("Chưa nhập tiêu chí tìm kiếm", "Thông báo");
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            btTimkiem.Enabled = true;
+        }
       
     }
 }

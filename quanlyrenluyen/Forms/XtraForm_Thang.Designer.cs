@@ -63,6 +63,13 @@
             this.view_1TableAdapter = new quanlyrenluyen.ketquarenluyenDataSet1TableAdapters.View_1TableAdapter();
             this.renluyenTableAdapter = new quanlyrenluyen.ketquarenluyenDataSet2TableAdapters.renluyenTableAdapter();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::quanlyrenluyen.Forms.WaitForm1), true, true);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.btTimkiem = new DevExpress.XtraEditors.SimpleButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbbTimkiem = new System.Windows.Forms.ComboBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             maHvLabel = new System.Windows.Forms.Label();
             maDiemTruLabel = new System.Windows.Forms.Label();
             maDiemCongLabel = new System.Windows.Forms.Label();
@@ -81,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // maHvLabel
@@ -131,10 +139,10 @@
             this.thànhTíchDataGridViewTextBoxColumn,
             this.viPhạmDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.renluyenBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 240);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 317);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(577, 142);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
@@ -181,6 +189,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.bt_Thoat);
             this.groupControl1.Controls.Add(this.bt_them);
             this.groupControl1.Controls.Add(this.bt_Xoa);
@@ -188,7 +197,7 @@
             this.groupControl1.Controls.Add(this.bt_Sua);
             this.groupControl1.Location = new System.Drawing.Point(1, 129);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(577, 82);
+            this.groupControl1.Size = new System.Drawing.Size(577, 174);
             this.groupControl1.TabIndex = 25;
             this.groupControl1.Text = "Công cụ";
             // 
@@ -205,7 +214,7 @@
             // bt_them
             // 
             this.bt_them.Image = ((System.Drawing.Image)(resources.GetObject("bt_them.Image")));
-            this.bt_them.Location = new System.Drawing.Point(7, 28);
+            this.bt_them.Location = new System.Drawing.Point(18, 28);
             this.bt_them.Name = "bt_them";
             this.bt_them.Size = new System.Drawing.Size(74, 40);
             this.bt_them.TabIndex = 5;
@@ -349,11 +358,89 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btRefresh);
+            this.groupBox2.Controls.Add(this.btTimkiem);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.cbbTimkiem);
+            this.groupBox2.Controls.Add(this.txtTimKiem);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(7, 75);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(535, 84);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tìm kiếm";
+            // 
+            // btRefresh
+            // 
+            this.btRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btRefresh.Image")));
+            this.btRefresh.Location = new System.Drawing.Point(412, 25);
+            this.btRefresh.Name = "btRefresh";
+            this.btRefresh.Size = new System.Drawing.Size(93, 39);
+            this.btRefresh.TabIndex = 34;
+            this.btRefresh.Text = "Refresh";
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
+            // 
+            // btTimkiem
+            // 
+            this.btTimkiem.Enabled = false;
+            this.btTimkiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimkiem.Image")));
+            this.btTimkiem.Location = new System.Drawing.Point(140, 25);
+            this.btTimkiem.Name = "btTimkiem";
+            this.btTimkiem.Size = new System.Drawing.Size(93, 39);
+            this.btTimkiem.TabIndex = 33;
+            this.btTimkiem.Text = "Tìm kiếm";
+            this.btTimkiem.Click += new System.EventHandler(this.btTimkiem_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(257, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 21);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Tiêu chí tìm kiếm";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 21);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Nhập từ khóa";
+            // 
+            // cbbTimkiem
+            // 
+            this.cbbTimkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cbbTimkiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTimkiem.FormattingEnabled = true;
+            this.cbbTimkiem.Items.AddRange(new object[] {
+            "Học viên",
+            "Tháng",
+            "Năm"});
+            this.cbbTimkiem.Location = new System.Drawing.Point(255, 44);
+            this.cbbTimkiem.Name = "cbbTimkiem";
+            this.cbbTimkiem.Size = new System.Drawing.Size(132, 24);
+            this.cbbTimkiem.TabIndex = 30;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(6, 42);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(128, 22);
+            this.txtTimKiem.TabIndex = 9;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
             // XtraForm_Thang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 423);
+            this.ClientSize = new System.Drawing.Size(580, 463);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGridView1);
@@ -378,6 +465,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketquarenluyenDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -413,5 +502,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn thànhTíchDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn viPhạmDataGridViewTextBoxColumn;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.SimpleButton btRefresh;
+        private DevExpress.XtraEditors.SimpleButton btTimkiem;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbbTimkiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }
