@@ -121,7 +121,7 @@ namespace quanlyrenluyen.Forms
                         }
                         else
                         b.QueryIDU("insert into HocVien (MaHv, MaLop, HoTen, GioiTinh, NgaySinh, QueQuan) values('" + hv.MaHv1 + "','" + hv.MaLop1 + "',N'"+hv.HoTen1+"','"+hv.GioiTinh1+"','"+hv.NgaySinh1+"',N'"+hv.QueQuan1+"')");
-                        if (txtImage.Text.Trim() != null) saveImage();
+                        if (txtImage.Text.Trim() != "") saveImage();
                     }
                 }
                 else if (key == 2)
@@ -148,7 +148,7 @@ namespace quanlyrenluyen.Forms
                         }
                         else
                         b.QueryIDU("update HocVien set  MaLop='" + hv.MaLop1 + "', HoTen=N'" + hv.HoTen1 + "', GioiTinh='" + hv.GioiTinh1 + "', NgaySinh='" + hv.NgaySinh1+"', QueQuan=N'" + hv.QueQuan1 + "' where MaHv='" + hv.MaHv1+ "'");
-                        if (txtImage.Text.Trim() != null) saveImage();
+                        if (txtImage.Text.Trim() != "") saveImage();
                     }
                 }
                 else if (key == 3)

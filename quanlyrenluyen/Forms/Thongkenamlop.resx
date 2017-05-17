@@ -121,13 +121,15 @@
     <value>17, 17</value>
   </metadata>
   <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>SELECT        Lớp, [Học viên], Năm, ROUND(AVG([Điểm trung bình]),2) AS [Trung bình năm],  iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 9, N'Xuất sắc', 
-                         iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 8, N'Tốt', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 7, N'Khá', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 6, N'Trung bình khá', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 5, 
+    <value>SELECT        Lớp, MaHv, [Học viên], Năm, ROUND(AVG([Điểm trung bình]), 2) AS [Trung bình năm], iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 9, N'Xuất sắc', iif(ROUND(AVG([Điểm trung bình]), 2) 
+                         &gt;= 8, N'Tốt', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 7, N'Khá', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 6, N'Trung bình khá', iif(ROUND(AVG([Điểm trung bình]), 2) &gt;= 5, 
                          N'Trung bình', N'Yếu'))))) AS [Xếp loại]
-FROM            dbo.thongkeLop
-GROUP BY Lớp, [Học viên], Năm</value>
+FROM            dbo.HocVien CROSS JOIN
+                         dbo.thongkeLop
+where [Học viên]=HoTen
+GROUP BY Lớp, MaHv, [Học viên], Năm</value>
   </data>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iTOG7m3AiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSOG7jWMgdmnDqm4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTsSDbSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlRydW5nIGLDrG5oIG7Eg20iIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iWOG6v3AgbG/huqFpIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlF1ZXJ5XzEiPjxGaWVsZCBOYW1lPSJT4buRIGzGsOG7o25nIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnlfMiI+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujbmciIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV8zIj48RmllbGQgTmFtZT0iU+G7kSBsxrDhu6NuZyIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlF1ZXJ5XzQiPjxGaWVsZCBOYW1lPSJT4buRIGzGsOG7o25nIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnlfNSI+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujbmciIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV82Ij48RmllbGQgTmFtZT0iU+G7kSBsxrDhu6NuZyIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iTOG7m3AiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFIdiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJI4buNYyB2acOqbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOxINtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVHJ1bmcgYsOsbmggbsSDbSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJY4bq/cCBsb+G6oWkiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnlfMSI+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujbmciIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV8yIj48RmllbGQgTmFtZT0iU+G7kSBsxrDhu6NuZyIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlF1ZXJ5XzMiPjxGaWVsZCBOYW1lPSJT4buRIGzGsOG7o25nIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnlfNCI+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujbmciIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV81Ij48RmllbGQgTmFtZT0iU+G7kSBsxrDhu6NuZyIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlF1ZXJ5XzYiPjxGaWVsZCBOYW1lPSJT4buRIGzGsOG7o25nIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
 </root>
